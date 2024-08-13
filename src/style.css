@@ -1,12 +1,225 @@
-@font-face {
-  font-family: "MyFont";
-  src: url("./fonts/my-font.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-h1 {
-  font-family: "MyFont";
-  background: url(./images/favicon.png);
-  color: blue;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header/Profile Section */
+.profile-header {
+  background-color: #1a9b8a;
+  color: white;
+  padding: 50px 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.about-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-links a[href*="linkedin.com"] i {
+  color: black;
+}
+
+.email-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Project Section */
+.my-work {
+  margin-top: 50px;
+}
+
+.projects {
+  display: grid;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-screenshot {
+  background-color: #e0e0e0;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 100px 0;
+  font-weight: bold;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.4em;
+}
+
+.project-info p {
+  margin: 0 0 20px 0;
+  font-size: 1em;
+}
+
+.project-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.project-links a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.project-links img {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+
+.red .project-screenshot {
+  background-color: #b71c1c;
+}
+
+.purple .project-screenshot {
+  background-color: #8e24aa;
+}
+
+.green .project-screenshot {
+  background-color: #388e3c;
+}
+
+.pink .project-screenshot {
+  background-color: #e91e63;
+}
+
+.orange .project-screenshot {
+  background-color: #f57c00;
+}
+
+.blue .project-screenshot {
+  background-color: #1976d2;
+}
+
+/* Contact Me Section */
+.contact-me {
+  background-color: #1a9b8a;
+  color: white;
+  padding: 50px 20px;
+  margin-top: 50px;
+  clip-path: polygon(0 15%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-content {
+  max-width: 600px;
+}
+
+.contact-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.contact-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.contact-content address {
+  font-style: normal;
+  margin-bottom: 20px;
+}
+
+.contact-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-image img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 600px) {
+  .projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
 }

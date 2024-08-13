@@ -1,7 +1,7 @@
 {
-  "name": "js-project-template",
-  "version": "1.0.1",
-  "description": "My personal basic project template",
+  "name": "responsive-homepage",
+  "version": "1.0",
+  "description": "Responsive homepage project for the Odin Project.",
   "main": "index.js",
   "scripts": {
     "test": "jest",

@@ -1,6 +1,8 @@
 # Responsive Homepage
 
-Responsive Homepage project for the Odin Project.
+Responsive Homepage / Portfolio Site
+
+Live demo: https://btenc.github.io/responsive-homepage/
 
 ## Built using:
 
